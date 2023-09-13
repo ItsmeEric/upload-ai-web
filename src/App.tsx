@@ -38,7 +38,10 @@ export function App() {
           </p>
         </div>
 
-        <aside className="w-88"></aside>
+        <aside className="w-80 space-y-6">
+          <p>Oi</p>
+          <p>Para</p>
+        </aside>
       </main>
     </div >
   )
