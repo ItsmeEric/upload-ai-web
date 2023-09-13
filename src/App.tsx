@@ -4,6 +4,7 @@ import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
 import { FileVideo } from "lucide-react";
 import { Label } from "./components/ui/label";
+import { Upload } from "lucide-react";
 
 export function App() {
   return (
@@ -60,10 +61,14 @@ export function App() {
                 id="transcription_prompt"
                 className="min-h-20 leading-relaxed"
                 placeholder="Include keywords mentioned in the video, separated by commas (,)"
-              >
-
-              </Textarea>
+              />
             </div>
+
+            <Button type="submit" className="w-full">
+              Upload video
+              <Upload className="w-4 h-4 ml-2" />
+            </Button>
+
           </form>
         </aside>
       </main>
