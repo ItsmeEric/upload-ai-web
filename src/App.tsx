@@ -1,11 +1,10 @@
-import { Github } from "lucide-react";
+import { Github, FileVideo, Upload, Wand2 } from "lucide-react";
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
-import { FileVideo } from "lucide-react";
 import { Label } from "./components/ui/label";
-import { Upload } from "lucide-react";
 import { Select, SelectContent, SelectTrigger, SelectItem, SelectValue } from "./components/ui/select";
+import { Slider } from "./components/ui/slider";
 
 export function App() {
   return (
@@ -95,14 +94,25 @@ export function App() {
 
             <Separator />
 
-            <div className="space-y-2">
+            <div className="space-y-4">
               <Label>Temperature</Label>
+              <Slider
+                min={0}
+                max={1}
+                step={0.1}
+              />
 
-              <span className="block text-xs text-muted-foreground italic">
+              <span className="block text-xs text-muted-foreground italic leading-relaxed">
                 Higher value tend to give more creative results but it gives a lot of wrong results too.
               </span>
             </div>
 
+            <Separator />
+
+            <Button type="submit" className="w-full">
+              Submit
+              <Wand2 className="w-4 h-4 ml-2" />
+            </Button>
           </form>
 
         </aside>
