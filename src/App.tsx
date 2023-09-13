@@ -2,6 +2,7 @@ import { Github } from "lucide-react";
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
+import { FileVideo } from "lucide-react";
 
 export function App() {
   return (
@@ -34,7 +35,7 @@ export function App() {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            Remenber: you can use the <code className="text-violet-400">{'{transcription}'}</code> variable on your prompt to add the transcription content of the selected video.
+            Remember: you can use the <code className="text-violet-400">{'{transcription}'}</code> variable on your prompt to add the transcription content of the selected video.
           </p>
         </div>
 
@@ -44,6 +45,7 @@ export function App() {
               htmlFor="video"
               className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/5"
             >
+              <FileVideo className="w-4 h-4" />
               Upload video
             </label>
 
