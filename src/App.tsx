@@ -3,6 +3,7 @@ import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
 import { FileVideo } from "lucide-react";
+import { Label } from "./components/ui/label";
 
 export function App() {
   return (
@@ -46,10 +47,23 @@ export function App() {
               className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/5"
             >
               <FileVideo className="w-4 h-4" />
-              Upload video
+              Select the video
             </label>
 
             <input type="file" id="video" accept="video/mp4" className="sr-only" />
+
+            <Separator />
+
+            <div className="space-y-1">
+              <Label htmlFor="transcription_prompt">Transcription Prompt</Label>
+              <Textarea
+                id="transcription_prompt"
+                className="min-h-20 leading-relaxed"
+                placeholder="Include keywords mentioned in the video, separated by commas (,)"
+              >
+
+              </Textarea>
+            </div>
           </form>
         </aside>
       </main>
