@@ -5,6 +5,7 @@ import { Button } from "./components/ui/button";
 import { FileVideo } from "lucide-react";
 import { Label } from "./components/ui/label";
 import { Upload } from "lucide-react";
+import { Select, SelectContent, SelectTrigger, SelectItem, SelectValue } from "./components/ui/select";
 
 export function App() {
   return (
@@ -55,11 +56,11 @@ export function App() {
 
             <Separator />
 
-            <div className="space-y-1">
+            <div className="space-y-2">
               <Label htmlFor="transcription_prompt">Transcription Prompt</Label>
               <Textarea
                 id="transcription_prompt"
-                className="min-h-20 leading-relaxed"
+                className="h-20 leading-relaxed resize-none"
                 placeholder="Include keywords mentioned in the video, separated by commas (,)"
               />
             </div>
@@ -70,6 +71,40 @@ export function App() {
             </Button>
 
           </form>
+
+          <Separator />
+
+          <form className="space-y-6">
+            <div className="space-y-2">
+              <Label>Model</Label>
+              <Select defaultValue="gpt3.5" disabled>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="gpt3.5">
+                    GPT 3.5-turbo 16k
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+
+              <span className="block text-xs text-muted-foreground italic">
+                You will be able to customize this soon
+              </span>
+            </div>
+
+            <Separator />
+
+            <div className="space-y-2">
+              <Label>Temperature</Label>
+
+              <span className="block text-xs text-muted-foreground italic">
+                Higher value tend to give more creative results but it gives a lot of wrong results too.
+              </span>
+            </div>
+
+          </form>
+
         </aside>
       </main>
     </div >
