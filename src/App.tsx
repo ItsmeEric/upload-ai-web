@@ -1,5 +1,6 @@
 import { Github } from "lucide-react";
 import { Separator } from "./components/ui/separator";
+import { Textarea } from "./components/ui/textarea";
 import { Button } from "./components/ui/button";
 
 export function App() {
@@ -22,7 +23,14 @@ export function App() {
       <main className="flex-1 p-6 flex gap-6">
         <div className="flex flex-col flex-1 gap-4">
           <div className="grid grid-rows-2 gap-4 flex-1">
-
+            <Textarea
+              className="resize-none p-4 leading-relaxed"
+              placeholder="Include the prompt for the AI..."
+            />
+            <Textarea
+              className="resize-none p-4 leading-relaxed"
+              placeholder="AI generated results..." readOnly
+            />
           </div>
 
           <p className="text-sm text-muted-foreground">
