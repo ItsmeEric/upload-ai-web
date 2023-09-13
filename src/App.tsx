@@ -39,8 +39,16 @@ export function App() {
         </div>
 
         <aside className="w-80 space-y-6">
-          <p>Oi</p>
-          <p>Para</p>
+          <form className="space-y-6">
+            <label
+              htmlFor="video"
+              className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/5"
+            >
+              Upload video
+            </label>
+
+            <input type="file" id="video" accept="video/mp4" className="sr-only" />
+          </form>
         </aside>
       </main>
     </div >
